@@ -17,4 +17,17 @@ class TextStyles {
     color: TextColors.PRIMARY_COLOR,
     fontSize: 34,
   );
+  static const RESULT_QUESTION = TextStyle(
+    color: TextColors.SECONDARY_COLOR,
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+  );
+  static const FALSE_ANSWER = TextStyle(
+    color: TextColors.FALSE_ANSWER,
+    fontSize: 16,
+  );
+  static const TRUE_ANSWER = TextStyle(
+    color: TextColors.TRUE_ANSWER,
+    fontSize: 16,
+  );
 }

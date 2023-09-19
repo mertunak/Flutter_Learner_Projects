@@ -14,6 +14,7 @@ abstract class _QuestionViewModelBase extends BaseViewModel with Store {
 
   List<String> selectedAnswers = [];
 
+
   @observable
   QuestionModel currentQuestion = questions[0];
 
@@ -25,12 +26,14 @@ abstract class _QuestionViewModelBase extends BaseViewModel with Store {
       currentQuestion = questions[currentQuestionIndex];
       selectedAnswers.add(selectedAnswer);
     } else {
+      selectedAnswers.add(selectedAnswer);
       showDialog(
           context: context,
           builder: (BuildContext context) {
             return ResultDialogWidget(
               width: dyanmicWidthDevice(context, 0.8),
-              height: dynamicHeightDevice(context, 0.6),
+              height: dynamicHeightDevice(context, 0.5),
+              selectedAnswers: selectedAnswers,
             );
           });
     }
